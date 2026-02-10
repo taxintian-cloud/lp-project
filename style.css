@@ -225,6 +225,23 @@ header,
     }
 }
 
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;       /* 少し小さめに */
+        line-height: 1.9;      /* 行間を少し広げる */
+    }
+
+    section, .container {
+        padding-left: 16px;    /* 左右に余白 */
+        padding-right: 16px;
+    }
+
+    p, li {
+        word-break: break-word; /* 文字がはみ出さないように */
+    }
+}
+
+
 #flow {
     line-height: 2.0;
 }
@@ -242,6 +259,7 @@ header,
 .question label, .container p, section p {
     max-width: 100%;
 }
+
 
 
 
