@@ -20,7 +20,7 @@ section + section {
 }
 
 body, h1, h2, p, li, a {
-    word-break: normal; /* または keep-all */
+    word-break: break-word; /* または keep-all */
     overflow-wrap: break-word;
 }
 
@@ -215,7 +215,6 @@ header,
     }
 }
 
-
 #flow {
     line-height: 2.0;
 }
@@ -228,6 +227,10 @@ header,
 #flow strong {
     display: block;
     margin-bottom: 10px;
+}
+
+.question label, .container p, section p {
+    max-width: 100%;
 }
 
 
