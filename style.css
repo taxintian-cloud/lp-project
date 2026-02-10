@@ -16,21 +16,20 @@ body {
 }
 
 input, select, label, p {
-    word-break: break-word; /* 長い単語も折り返す */
-    overflow-wrap: anywhere; /* どこでも折り返す */
+    word-break: break-word; 
+    overflow-wrap: anywhere; 
 }
 
 h1, h2 {
-    word-break: keep-all; /* 見出しは単語をなるべく崩さない */
+    word-break: keep-all; 
 }
-
 
 section + section {
     border-top: 1px solid rgba(255,255,255,0.04);
 }
 
 body, h1, h2, p, li, a {
-    word-break: break-word; /* または keep-all */
+    word-break: break-word; 
     overflow-wrap: break-word;
 }
 
@@ -178,7 +177,7 @@ header,
     line-height: 1.7;
 }
 
-/* to-topボタン */
+/* to-topボタン（ふんわり出現） */
 #to-top {
     position: fixed;
     bottom: 40px;
@@ -192,11 +191,27 @@ header,
     font-size: 24px;
     cursor: pointer;
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    display: none;
+    
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none; /* 非表示時はクリック不可 */
+    
+    transition: 
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.2s ease;
+    
     z-index: 1000;
+}
+
+#to-top.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 #to-top:hover {
@@ -214,12 +229,17 @@ header,
         transition: none;
         transform: none;
     }
+
+    #to-top {
+        transition: none;
+    }
 }
 
+/* スマホ対応 */
 @media (max-width: 480px) {
     section p,
     ul, ol {
-        max-width: 90%; /* 画面幅に応じて広めに */
+        max-width: 90%; 
         margin-left: auto;
         margin-right: auto;
     }
@@ -227,20 +247,19 @@ header,
 
 @media (max-width: 600px) {
     body {
-        font-size: 16px;       /* 少し小さめに */
-        line-height: 1.9;      /* 行間を少し広げる */
+        font-size: 16px; 
+        line-height: 1.9; 
     }
 
     section, .container {
-        padding-left: 16px;    /* 左右に余白 */
+        padding-left: 16px; 
         padding-right: 16px;
     }
 
     p, li {
-        word-break: break-word; /* 文字がはみ出さないように */
+        word-break: break-word; 
     }
 }
-
 
 #flow {
     line-height: 2.0;
