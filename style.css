@@ -15,6 +15,16 @@ body {
     font-size: clamp(17px, 1.9vw, 18.5px);
 }
 
+input, select, label, p {
+    word-break: break-word; /* 長い単語も折り返す */
+    overflow-wrap: anywhere; /* どこでも折り返す */
+}
+
+h1, h2 {
+    word-break: keep-all; /* 見出しは単語をなるべく崩さない */
+}
+
+
 section + section {
     border-top: 1px solid rgba(255,255,255,0.04);
 }
@@ -232,6 +242,7 @@ header,
 .question label, .container p, section p {
     max-width: 100%;
 }
+
 
 
 
