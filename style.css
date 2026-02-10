@@ -1,4 +1,4 @@
-/*ベースライン*/
+/* ベースライン */
 *,
 *::before,
 *::after {
@@ -16,10 +16,10 @@ body {
 }
 
 section + section {
-    border-top: 1px solid rgba(255,255,255,0.04)
+    border-top: 1px solid rgba(255,255,255,0.04);
 }
 
-/*レイアウト*/
+/* レイアウト */
 header {
     padding: 80px 20px;
 }
@@ -162,6 +162,7 @@ header,
     color: #9ca3af;
     line-height: 1.7;
 }
+
 /* to-topボタン */
 #to-top {
     position: fixed;
@@ -169,14 +170,14 @@ header,
     right: 40px;
     width: 50px;
     height: 50px;
-    background-color: #9ca3af; /* 丸の色：LPのアクセントに合わせる */
-    color: #0f1115; /* 短い白文字でも読みやすい */
+    background-color: #9ca3af;
+    color: #0f1115;
     border: none;
     border-radius: 50%;
     font-size: 24px;
     cursor: pointer;
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -193,13 +194,13 @@ header,
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-
 @media (prefers-reduced-motion: reduce) {
     #cta a {
         transition: none;
         transform: none;
     }
 }
+
 #flow {
     line-height: 2.0;
 }
@@ -212,6 +213,7 @@ header,
 #flow strong {
     display: block;
     margin-bottom: 10px;
-
 }
+
+
 
