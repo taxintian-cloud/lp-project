@@ -162,29 +162,37 @@ header,
     color: #9ca3af;
     line-height: 1.7;
 }
+/* to-topボタン */
 #to-top {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    padding: 12px 16px;
-    font-size: 1.2rem;
+    width: 50px;
+    height: 50px;
+    background-color: #9ca3af; /* 丸の色：LPのアクセントに合わせる */
+    color: #0f1115; /* 短い白文字でも読みやすい */
     border: none;
-    border-radius: 999px;
-    background-color: #9ca3af;
-    color: #0f1115;
+    border-radius: 50%;
+    font-size: 24px;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-    display: none; /* 最初は非表示 */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     z-index: 1000;
 }
 
 #to-top:hover {
-    background-color: #f9fafb;
-    color: #0f1115;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
+
+#to-top:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
 
 @media (prefers-reduced-motion: reduce) {
     #cta a {
@@ -206,3 +214,4 @@ header,
     margin-bottom: 10px;
 
 }
+
