@@ -19,6 +19,11 @@ section + section {
     border-top: 1px solid rgba(255,255,255,0.04);
 }
 
+body, h1, h2, p, li, a {
+    word-break: normal; /* または keep-all */
+    overflow-wrap: break-word;
+}
+
 /* レイアウト */
 header {
     padding: 80px 20px;
@@ -201,6 +206,16 @@ header,
     }
 }
 
+@media (max-width: 480px) {
+    section p,
+    ul, ol {
+        max-width: 90%; /* 画面幅に応じて広めに */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
 #flow {
     line-height: 2.0;
 }
@@ -214,6 +229,7 @@ header,
     display: block;
     margin-bottom: 10px;
 }
+
 
 
 
