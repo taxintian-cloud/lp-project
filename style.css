@@ -278,6 +278,9 @@ header,
 .question label, .container p, section p {
     max-width: 100%;
 }
+.cta-safe li {
+    list-style: none;
+}
 
 
 
