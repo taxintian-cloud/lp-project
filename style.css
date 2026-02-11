@@ -278,8 +278,23 @@ header,
 .question label, .container p, section p {
     max-width: 100%;
 }
-.cta-safe li {
-    list-style: none;
+
+#target {
+    text-align: center;
+}
+
+.target-list, .safe-list, .first-list {
+    list-style: disc;
+    display: inline-block;   /* 中央寄せのまま縦揃え */
+    text-align: left;        /* 文字は左揃え */
+    max-width: 600px;
+    margin: 0 auto 24px;
+    padding-left: 1.2em;
+}
+
+.target-list li {
+    margin-bottom: 10px;
+    line-height: 1.7;
 }
 
 
